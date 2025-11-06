@@ -348,7 +348,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Web Respone (HTTPS)",
-              "description": "",
+              "description": "De webserver stuurt een beveiligd antwoord terug naar de client met gebruikersdata, medicatie-informatie of meldingen.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -357,7 +357,21 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "1530498d-71f8-4149-a762-37db7878d13a",
+                  "title": "Gevoelige data in HTTP-response",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Ongefilterde data (zoals wachtwoorden of interne ID’s) kan zichtbaar zijn in responses.",
+                  "mitigation": "Filter alle gevoelige velden uit responses, gebruik HTTPS-only headers.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 21,
+                  "score": ""
+                }
+              ]
             },
             "labels": [
               "Web Respone (HTTPS)"
@@ -376,7 +390,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -397,7 +412,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -405,12 +420,12 @@
               "threats": [
                 {
                   "id": "028e8f77-a596-4311-abc0-56fc6b98346b",
-                  "title": "Onderschepping van dataverkeer",
+                  "title": "Onjuiste HTTPS-configuratie",
                   "status": "Mitigated",
-                  "severity": "Critical",
-                  "type": "Tampering",
-                  "description": "Verkeer kan worden onderschept als HTTPS ontbreekt of verkeerd geconfigureerd is.",
-                  "mitigation": "TLS 1.2 of hoger, certificaatrotatie, HSTS.",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Onjuiste SSL-configuratie of verlopen certificaten kunnen leiden tot onderschepping van data.",
+                  "mitigation": "Gebruik TLS 1.2 of hoger, certificaatrotatie en HSTS.",
                   "modelType": "default",
                   "new": false,
                   "number": 19,
@@ -418,12 +433,12 @@
                 },
                 {
                   "id": "b547ded9-83d3-41ee-8b04-88ce0b0c89f4",
-                  "title": "Onderschepping van dataverkeer",
-                  "status": "Mitigated",
-                  "severity": "Critical",
-                  "type": "Spoofing",
-                  "description": "Verkeer kan worden onderschept als HTTPS ontbreekt of verkeerd geconfigureerd is.",
-                  "mitigation": "TLS 1.2 of hoger, certificaatrotatie, HSTS.",
+                  "title": "Ongeautoriseerde query via client",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Een kwaadwillende gebruiker kan proberen extra of gemanipuleerde query’s te versturen buiten de normale UI.",
+                  "mitigation": "Inputvalidatie aan serverzijde en API-token authenticatie.",
                   "modelType": "default",
                   "new": false,
                   "number": 20,
@@ -442,16 +457,6 @@
             "target": {
               "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
               "port": "da37715a-6729-4c41-a32f-9a7158a6a7db"
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
             }
           },
           {
@@ -475,7 +480,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Queries",
-              "description": "",
+              "description": "Het webportaal stuurt databasequeries via de server om gegevens op te halen of aan te passen (zoals inname-log of planning).",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -484,7 +489,34 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "5e547571-d47a-4cae-b353-fe4629618a58",
+                  "title": "SQL Injection",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Kwaadaardige invoer kan leiden tot manipulatie van databasequery’s.",
+                  "mitigation": "Prepared statements, ORM, parameterized queries.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                },
+                {
+                  "id": "c9b18691-ec35-4b24-a7fe-be1b7daad5e0",
+                  "title": "Overbelasting door te veel queries",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Te veel databaseverzoeken tegelijk kunnen prestaties verlagen of blokkeren.",
+                  "mitigation": "Rate limiting, caching, en query-optimalisatie.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
+                }
+              ]
             },
             "labels": [
               "Queries"
@@ -577,7 +609,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Query results",
-              "description": "",
+              "description": "De database stuurt queryresultaten terug naar de server of webportaal voor verwerking en weergave aan de gebruiker.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -586,7 +618,21 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "fbb52179-6b2b-4e82-9fcb-ef52eae081a1",
+                  "title": "Ongefilterde gegevens in output",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Data bevat gevoelige of overbodige informatie (zoals e-mailadressen, interne IDs).",
+                  "mitigation": "Sanitize output, filter gevoelige kolommen.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 24,
+                  "score": ""
+                }
+              ]
             },
             "labels": [
               "Query results"
@@ -1099,7 +1145,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1116,16 +1163,30 @@
             "data": {
               "type": "tm.Flow",
               "name": "Notificatie bevestigd",
-              "description": "De gebruiker bevestigd inname van medicament(en)",
+              "description": "De app stuurt een melding terug naar de server dat de gebruiker de medicatieherinnering heeft ontvangen of bevestigd.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "e7b5756b-01bb-446c-89b3-99ebbb186366",
+                  "title": "Valse bevestiging van notificatie",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Een kwaadwillende gebruiker of bot kan bevestigingen faken om naleving te simuleren.",
+                  "mitigation": "Authenticatie bij elke notificatie, tijdstempelverificatie, en logging.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
+                }
+              ]
             },
             "labels": [
               "Notificatie bevestigd"
@@ -1252,7 +1313,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1269,16 +1331,30 @@
             "data": {
               "type": "tm.Flow",
               "name": "Ophalen\nMedicatieschema",
-              "description": "",
+              "description": "De mobiele webapp of browser haalt het medicatieschema van de gebruiker op uit de database via het webportaal.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "9a2750ea-2c62-48f8-81ea-f44d7da7689a",
+                  "title": "Toegang tot ander gebruikersschema",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Gebruiker kan proberen het schema van een andere patiënt op te vragen door URL-manipulatie.",
+                  "mitigation": "Authorisatie op gebruikers-ID-niveau, tokens met beperkte scope.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 25,
+                  "score": ""
+                }
+              ]
             },
             "labels": [
               "Ophalen\nMedicatieschema"
@@ -1366,7 +1442,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1383,16 +1460,30 @@
             "data": {
               "type": "tm.Flow",
               "name": "Planning en Medicatie \ninname logging",
-              "description": "",
+              "description": "Automatisch proces dat een nieuwe planning aanmaakt en logt wanneer medicatie wordt ingenomen.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "facbb5f5-c957-475d-a00c-39ba449dee3b",
+                  "title": "Manipulatie van planning via automatiseringsscript",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Kwaadwillende gebruiker kan het script manipuleren om verkeerde planningen of logs te genereren.",
+                  "mitigation": "Code signing en toegangscontrole voor automatiseringsscripts.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 28,
+                  "score": ""
+                }
+              ]
             },
             "labels": [
               "Planning en Medicatie \ninname logging"
@@ -1421,7 +1512,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1438,16 +1530,43 @@
             "data": {
               "type": "tm.Flow",
               "name": "Synchronisatie",
-              "description": "De logs worden gesynchroniseert met de database bij beschikbaarheid van netwerkverbinding",
+              "description": "De mobiele app synchroniseert lokale logs met de centrale database zodra er weer een internetverbinding beschikbaar is.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "367640ee-ea6d-40dc-9dc6-bfd0f7441758",
+                  "title": "Manipulatie van lokale logs tijdens offline modus",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Aanvaller kan lokale logdata aanpassen voordat synchronisatie plaatsvindt.",
+                  "mitigation": "Digitale handtekening of checksum bij lokale dataopslag.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
+                },
+                {
+                  "id": "7c616dc3-9d41-481b-926e-420eb53b99ad",
+                  "title": "Onbeveiligde overdracht tijdens sync",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Synchronisatieverkeer kan gevoelige data lekken als encryptie ontbreekt.",
+                  "mitigation": "Gebruik TLS en versleutelde payloads.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 27,
+                  "score": ""
+                }
+              ]
             },
             "labels": [
               "Synchronisatie"
@@ -2333,7 +2452,7 @@
                   "title": "DDos",
                   "status": "Mitigated",
                   "severity": "Medium",
-                  "type": "Spoofing",
+                  "type": "Denial of service",
                   "description": "Gebruiker of aanvaller verzendt te veel API-aanvragen, overbelast de server.",
                   "mitigation": "API rate limiting per gebruiker of IP, monitoring.",
                   "modelType": "default",
@@ -2370,6 +2489,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -2453,7 +2573,6 @@
               ]
             },
             "id": "f3d7a5ff-e85f-4f2a-899c-f85f7a3cf0e4",
-            "zIndex": 16,
             "data": {
               "type": "tm.Store",
               "name": "Login Service",
@@ -2505,6 +2624,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 17,
             "ports": {
               "groups": {
                 "top": {
@@ -2588,7 +2708,6 @@
               ]
             },
             "id": "fe2b3148-75cd-47e5-9758-0f57236f30c9",
-            "zIndex": 17,
             "data": {
               "type": "tm.Process",
               "name": "Oudere\nGebruikler",
@@ -2630,6 +2749,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 18,
             "ports": {
               "groups": {
                 "top": {
@@ -2767,8 +2887,7 @@
                   "score": ""
                 }
               ]
-            },
-            "zIndex": 18
+            }
           },
           {
             "shape": "flow",
@@ -2786,6 +2905,7 @@
             },
             "width": 200,
             "height": 100,
+            "zIndex": 21,
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
@@ -2818,8 +2938,7 @@
                 "x": 830,
                 "y": 660
               }
-            ],
-            "zIndex": 21
+            ]
           },
           {
             "shape": "flow",
@@ -2837,6 +2956,7 @@
             },
             "width": 200,
             "height": 100,
+            "zIndex": 22,
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
@@ -2869,8 +2989,7 @@
                 "x": 860,
                 "y": 710
               }
-            ],
-            "zIndex": 22
+            ]
           },
           {
             "position": {
@@ -2896,6 +3015,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 23,
             "ports": {
               "groups": {
                 "top": {
@@ -2979,7 +3099,6 @@
               ]
             },
             "id": "6e5d06cf-cf88-4426-b67e-40facdbf9ab3",
-            "zIndex": 23,
             "data": {
               "type": "tm.Store",
               "name": "Notificatie Service",
@@ -3034,6 +3153,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 24,
             "ports": {
               "groups": {
                 "top": {
@@ -3117,7 +3237,6 @@
               ]
             },
             "id": "c6750fa6-15db-4fb7-8b8f-0a5dd9082c60",
-            "zIndex": 24,
             "data": {
               "type": "tm.Store",
               "name": "Lokale Logsysteem",
@@ -3139,6 +3258,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "Yo mama",
-    "threatTop": 20
+    "threatTop": 29
   }
 }

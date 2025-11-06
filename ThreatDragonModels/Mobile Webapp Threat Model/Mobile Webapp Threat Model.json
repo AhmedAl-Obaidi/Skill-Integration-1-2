@@ -316,7 +316,7 @@
                   "title": "Session Hijacking",
                   "status": "Mitigated",
                   "severity": "Low",
-                  "type": "Denial of service",
+                  "type": "Spoofing",
                   "description": "Aanvaller steelt sessie-ID via onveilige cookies.",
                   "mitigation": "Gebruik HTTPS, HttpOnly & Secure cookies, token-verversing.",
                   "modelType": "default",
@@ -325,6 +325,13 @@
                   "score": ""
                 }
               ]
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {

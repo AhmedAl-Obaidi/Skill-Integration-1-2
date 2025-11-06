@@ -32,11 +32,826 @@
         "placeholder": "New generic diagram description",
         "thumbnail": "./public/content/images/thumbnail.jpg",
         "version": "2.5.0",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 400,
+              "y": 320
+            },
+            "size": {
+              "width": 140,
+              "height": 150
+            },
+            "attrs": {
+              "text": {
+                "text": "Web Application"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "da37715a-6729-4c41-a32f-9a7158a6a7db"
+                },
+                {
+                  "group": "right",
+                  "id": "4ca0581b-3660-4412-b6d9-8f1fe46cddef"
+                },
+                {
+                  "group": "bottom",
+                  "id": "0729bd86-d014-4f4a-982c-8f1e124af218"
+                },
+                {
+                  "group": "left",
+                  "id": "8d470ea8-69d9-4f52-9101-d6628a6314f3"
+                }
+              ]
+            },
+            "id": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Process",
+              "name": "Web Application",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "d8e54837-e7a5-4561-99bf-769168b97ce3",
+                  "title": "Browser Vulneribility",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "Een browser kan vulneribilities hebben dat hackers aan een persoon zijn wachtwoorden kan toekomen.",
+                  "mitigation": "2FA implementeren zodat hackers niet alleen de browser nodig hebben als poort om in te loggen.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "def0946a-c5e6-4147-b81c-b9c60fb0eb61",
+                  "title": "New generic threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 90,
+              "y": 130
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Browser"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "4137387c-f6cc-489a-abf7-af1eb4d071f7"
+                },
+                {
+                  "group": "right",
+                  "id": "1a4e7657-b6bf-465f-aa58-9e426f2a1a3d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "9e80fc80-5201-47c8-b4c8-e9f9da6e7905"
+                },
+                {
+                  "group": "left",
+                  "id": "6135b6ae-8a80-4847-a1fc-6f34e93da241"
+                }
+              ]
+            },
+            "id": "40a931b3-d579-4ae6-a030-52ee7d8e1a40",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Browser",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "d6c606ca-f807-4b96-8dd8-2a19568ae266",
+                  "title": "Browser Vulneribility",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "Een browser kan vulneribilities hebben dat hackers aan een persoon zijn wachtwoorden kan toekomen.",
+                  "mitigation": "2FA implementeren zodat hackers niet alleen de browser nodig hebben als poort om in te loggen.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Respone (HTTPS)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Web Respone (HTTPS)"
+            ],
+            "id": "0b93cfb5-5c3a-4171-b6f6-9aa751eab9df",
+            "source": {
+              "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
+              "port": "8d470ea8-69d9-4f52-9101-d6628a6314f3"
+            },
+            "target": {
+              "cell": "40a931b3-d579-4ae6-a030-52ee7d8e1a40",
+              "port": "9e80fc80-5201-47c8-b4c8-e9f9da6e7905"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Request (HTTPS)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Web Request (HTTPS)"
+            ],
+            "id": "e934b3fb-bb58-483b-9a93-e71c349c0c76",
+            "source": {
+              "cell": "40a931b3-d579-4ae6-a030-52ee7d8e1a40",
+              "port": "1a4e7657-b6bf-465f-aa58-9e426f2a1a3d"
+            },
+            "target": {
+              "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
+              "port": "da37715a-6729-4c41-a32f-9a7158a6a7db"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Queries",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Queries"
+            ],
+            "id": "eeb0fcfa-fa52-41c3-8d21-a9018fad82b8",
+            "source": {
+              "x": 470,
+              "y": 470
+            },
+            "target": {
+              "cell": "d7d4d1b1-0b6d-4184-b5bf-9fe212dabd8b",
+              "port": "e0318681-018d-4916-acb6-1c2f75729192"
+            },
+            "vertices": [
+              {
+                "x": 410,
+                "y": 570
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Query results",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Query results"
+            ],
+            "id": "c8edc70d-3c14-456a-a5c3-b1add3ee40f4",
+            "source": {
+              "cell": "d7d4d1b1-0b6d-4184-b5bf-9fe212dabd8b",
+              "port": "a225d621-4694-4061-b9e2-8fb9cd041441"
+            },
+            "target": {
+              "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
+              "port": "0729bd86-d014-4f4a-982c-8f1e124af218"
+            },
+            "vertices": [
+              {
+                "x": 530,
+                "y": 560
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Logging/Planning \naanmaakprocess automatiseren",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Logging/Planning \naanmaakprocess automatiseren"
+            ],
+            "id": "cb86473f-c6aa-4bd2-871e-2fdbd5e76d09",
+            "source": {
+              "cell": "b06d1e6d-9f0c-4e28-86b7-62bfc3b2a82a",
+              "port": "e9e77354-a786-44e7-85f5-3cad09a8e518"
+            },
+            "target": {
+              "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
+              "port": "8d470ea8-69d9-4f52-9101-d6628a6314f3"
+            },
+            "vertices": [
+              {
+                "x": 190,
+                "y": 450
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 410,
+              "y": 630
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Database"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "e9e77354-a786-44e7-85f5-3cad09a8e518"
+                },
+                {
+                  "group": "right",
+                  "id": "a225d621-4694-4061-b9e2-8fb9cd041441"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4c5130de-d11b-4a8f-89bd-3c96314b54d4"
+                },
+                {
+                  "group": "left",
+                  "id": "e0318681-018d-4916-acb6-1c2f75729192"
+                }
+              ]
+            },
+            "id": "d7d4d1b1-0b6d-4184-b5bf-9fe212dabd8b",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Store",
+              "name": "Database",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "e2fc1184-b66a-4d8d-b4fa-218bc8c97345",
+                  "title": "Unauthorised access",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Een aanvaller kan aan alle data geraken.",
+                  "mitigation": "Queries moeten van een geauthoriseerd account origineren.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "1f34d7b3-ad20-4e3f-8b88-00ab3ff95bfb",
+                  "title": "Credential theft",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "An attacker could obtain the DB credentials and use them to make unauthorised queries.\t\n\nEen hacker can de database credentials stelen en die gebruiken om data te stelen en/of queries uitvoeren dat schadelijk kunnen zijn.",
+                  "mitigation": "Gebruik een firewall om te filtreren op IP's dat op een white list staan en een wachtwoord en 2FA implementeren als nodige crendentiele gegevens. De juiste personen rechten geven om aan de database te geraken. \n",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 106,
+              "y": 570
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Planning/Medicine Usage Config"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "e9e77354-a786-44e7-85f5-3cad09a8e518"
+                },
+                {
+                  "group": "right",
+                  "id": "a225d621-4694-4061-b9e2-8fb9cd041441"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4c5130de-d11b-4a8f-89bd-3c96314b54d4"
+                },
+                {
+                  "group": "left",
+                  "id": "e0318681-018d-4916-acb6-1c2f75729192"
+                }
+              ]
+            },
+            "id": "b06d1e6d-9f0c-4e28-86b7-62bfc3b2a82a",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Store",
+              "name": "Planning/Medicine Usage Config",
+              "description": "Een code dat een planning met de gerelateerde persoonsgegevens in de database aanmaakt en bijvult wanneer medicatie ingenomen is",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "57719519-d54a-4d3e-b5b5-11308b464382",
+                  "title": "",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Integrity",
+                  "description": "Omdat dit stuk code toegang heeft tot de database en de medicatie inname logd, als iemand toegang krijgt tot de code, kan hij of zij de code manipuleren om zodat de code ook exporteert tot een externe bron om confidentiele data te stelen.",
+                  "mitigation": "Encryptie gebruiken op de credentials dat benodigd zijn om toegang te krijgen tot de code.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ]
+            }
+          }
+        ]
       }
     ],
     "diagramTop": 3,
     "reviewer": "Yo mama",
-    "threatTop": 1
+    "threatTop": 7
   }
 }

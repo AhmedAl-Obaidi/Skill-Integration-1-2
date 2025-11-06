@@ -178,7 +178,10 @@
                   "score": ""
                 }
               ]
-            }
+            },
+            "children": [
+              "f5f68f8a-1bc0-493c-b1f7-3be387694048"
+            ]
           },
           {
             "position": {
@@ -306,6 +309,19 @@
                   "modelType": "default",
                   "new": false,
                   "number": 7,
+                  "score": ""
+                },
+                {
+                  "id": "6cb5b84d-10b5-4934-9207-fcf7032bff9b",
+                  "title": "Session Hijacking",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Denial of service",
+                  "description": "Aanvaller steelt sessie-ID via onveilige cookies.",
+                  "mitigation": "Gebruik HTTPS, HttpOnly & Secure cookies, token-verversing.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 9,
                   "score": ""
                 }
               ]
@@ -447,8 +463,8 @@
             },
             "vertices": [
               {
-                "x": 400,
-                "y": 580
+                "x": 490,
+                "y": 550
               }
             ]
           },
@@ -549,63 +565,12 @@
             },
             "vertices": [
               {
-                "x": 530,
-                "y": 630
+                "x": 560,
+                "y": 590
               },
               {
-                "x": 470,
-                "y": 560
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Aanmaak/Beheer\nPlanning",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Aanmaak/Beheer\nPlanning"
-            ],
-            "id": "e69ba01a-979f-4042-b232-4abfeca45719",
-            "source": {
-              "cell": "6f42db29-811f-42ab-81e5-116b7f931c58",
-              "port": "f8171b19-e277-4b77-94fb-80a2986711d4"
-            },
-            "target": {
-              "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
-              "port": "da37715a-6729-4c41-a32f-9a7158a6a7db"
-            },
-            "vertices": [
-              {
-                "x": 430,
-                "y": 200
+                "x": 560,
+                "y": 520
               }
             ]
           },
@@ -699,41 +664,14 @@
               "cell": "d7d4d1b1-0b6d-4184-b5bf-9fe212dabd8b",
               "port": "e9e77354-a786-44e7-85f5-3cad09a8e518"
             },
-            "vertices": []
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Web Portaal",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              "Web Portaal"
-            ],
-            "id": "da16d6af-11e6-4f7f-99ea-3ca95527ae17",
-            "source": {
-              "x": 170,
-              "y": 20
-            },
-            "target": {
-              "x": 210,
-              "y": 770
-            },
             "vertices": [
               {
-                "x": 610,
-                "y": 130
+                "x": 690,
+                "y": 570
               },
               {
-                "x": 560,
-                "y": 650
+                "x": 670,
+                "y": 640
               }
             ]
           },
@@ -781,12 +719,915 @@
               "cell": "3f5c73d1-b58f-42a8-9c26-be41a4914fdb",
               "port": "35acce69-3c33-4221-815a-514f9457cfac"
             },
+            "vertices": [
+              {
+                "x": 850,
+                "y": 425
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Gegevens Checken",
+              "description": "De login server checkt of de ingegeven logingegevens correct zijn via een query.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Gegevens Checken"
+            ],
+            "id": "b0c49b8a-dcf1-4acb-9898-048da310d55e",
+            "source": {
+              "cell": "f3d7a5ff-e85f-4f2a-899c-f85f7a3cf0e4",
+              "port": "dee13ec9-c1f5-4d2f-9234-b7a312e202ef"
+            },
+            "target": {
+              "cell": "d7d4d1b1-0b6d-4184-b5bf-9fe212dabd8b",
+              "port": "e0318681-018d-4916-acb6-1c2f75729192"
+            },
+            "vertices": [
+              {
+                "x": 460,
+                "y": 710
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Resultaat Check",
+              "description": "Als de ingegeven credentials correct zijn, dan logt de gebruiker in en kan doorgaan.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Resultaat Check"
+            ],
+            "id": "6c470b07-07ef-4e5b-86c8-4ebac3e03d2d",
+            "source": {
+              "cell": "d7d4d1b1-0b6d-4184-b5bf-9fe212dabd8b",
+              "port": "e0318681-018d-4916-acb6-1c2f75729192"
+            },
+            "target": {
+              "cell": "f3d7a5ff-e85f-4f2a-899c-f85f7a3cf0e4",
+              "port": "dee13ec9-c1f5-4d2f-9234-b7a312e202ef"
+            },
+            "vertices": [
+              {
+                "x": 490,
+                "y": 660
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Login\nSuccesvol",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Login\nSuccesvol"
+            ],
+            "id": "f363a042-e469-4e6e-a686-72340c52959a",
+            "source": {
+              "cell": "f3d7a5ff-e85f-4f2a-899c-f85f7a3cf0e4",
+              "port": "74af9a7a-f2ad-4cbb-a3e8-d6fce889a827"
+            },
+            "target": {
+              "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
+              "port": "0729bd86-d014-4f4a-982c-8f1e124af218"
+            },
             "vertices": []
           },
           {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Web Portaal",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Web Portaal"
+            ],
+            "id": "da16d6af-11e6-4f7f-99ea-3ca95527ae17",
+            "source": {
+              "x": 90,
+              "y": 150
+            },
+            "target": {
+              "x": 220,
+              "y": 800
+            },
+            "vertices": [
+              {
+                "x": 190,
+                "y": 140
+              },
+              {
+                "x": 540,
+                "y": 210
+              },
+              {
+                "x": 660,
+                "y": 380
+              },
+              {
+                "x": 630,
+                "y": 560
+              },
+              {
+                "x": 490,
+                "y": 800
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Login\nSuccesvol",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Login\nSuccesvol"
+            ],
+            "id": "9af2be93-bf47-4f16-98f3-52f24a708926",
+            "source": {
+              "cell": "0caea0d5-d09d-4964-a37d-0c56fb678a52",
+              "port": "74af9a7a-f2ad-4cbb-a3e8-d6fce889a827"
+            },
+            "target": {
+              "cell": "3f5c73d1-b58f-42a8-9c26-be41a4914fdb",
+              "port": "f8171b19-e277-4b77-94fb-80a2986711d4"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Inloggegevens indienen",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Inloggegevens indienen"
+            ],
+            "id": "8ebb6140-c1fa-4d94-92f1-1fcf05e46a21",
+            "source": {
+              "cell": "6f42db29-811f-42ab-81e5-116b7f931c58",
+              "port": "fb8c70cf-7429-4ed7-8c7d-bf218f798448"
+            },
+            "target": {
+              "cell": "f3d7a5ff-e85f-4f2a-899c-f85f7a3cf0e4",
+              "port": "a85db0d3-266c-4084-b3b4-55f532c2cad2"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "e9644a10-1fe3-4d20-9d07-2a9bf98c41a2",
+            "source": {
+              "cell": "11da5329-118e-4db6-b5fd-da9df3996b43",
+              "port": "99004031-94d7-4632-90f0-21966c4570a3"
+            },
+            "target": {
+              "cell": "6e5d06cf-cf88-4426-b67e-40facdbf9ab3",
+              "port": "202f4731-3298-450f-a1b8-67391fb10bd2"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Medicatie \nInname Alert",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Medicatie \nInname Alert"
+            ],
+            "id": "b9bcfbaa-b2ff-4274-853d-b08b0d758386",
+            "source": {
+              "cell": "6e5d06cf-cf88-4426-b67e-40facdbf9ab3",
+              "port": "dee13ec9-c1f5-4d2f-9234-b7a312e202ef"
+            },
+            "target": {
+              "cell": "3f5c73d1-b58f-42a8-9c26-be41a4914fdb",
+              "port": "8a029f65-d4cb-42ed-8f32-2643b5de635a"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Notificatie bevestigd",
+              "description": "De gebruiker bevestigd inname van medicament(en)",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Notificatie bevestigd"
+            ],
+            "id": "cae74449-b826-4573-819e-f47c6f9c5f07",
+            "source": {
+              "cell": "3f5c73d1-b58f-42a8-9c26-be41a4914fdb",
+              "port": "8a029f65-d4cb-42ed-8f32-2643b5de635a"
+            },
+            "target": {
+              "cell": "6e5d06cf-cf88-4426-b67e-40facdbf9ab3",
+              "port": "dee13ec9-c1f5-4d2f-9234-b7a312e202ef"
+            },
+            "vertices": [
+              {
+                "x": 1000,
+                "y": 260
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Bevestiging \nInname Medicijn(en)",
+              "description": "Server krijgt te weten dat de gebruiker maakt een query aan om toe te voegen aan de database dat de medicijn is genomen.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Bevestiging \nInname Medicijn(en)"
+            ],
+            "id": "81a65e2c-8e64-429d-8530-0b96d219cdaa",
+            "source": {
+              "cell": "3f5c73d1-b58f-42a8-9c26-be41a4914fdb",
+              "port": "35acce69-3c33-4221-815a-514f9457cfac"
+            },
+            "target": {
+              "cell": "11da5329-118e-4db6-b5fd-da9df3996b43",
+              "port": "3480be78-9b28-4434-b5f9-6e72429d92d7"
+            },
+            "vertices": [
+              {
+                "x": 870,
+                "y": 500
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "f5f68f8a-1bc0-493c-b1f7-3be387694048",
+            "source": {
+              "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
+              "port": "4ca0581b-3660-4412-b6d9-8f1fe46cddef"
+            },
+            "target": {
+              "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
+              "port": "4ca0581b-3660-4412-b6d9-8f1fe46cddef"
+            },
+            "vertices": [],
+            "parent": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92"
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Inname Bevestiging",
+              "description": "Query om toe te voegen in database dat medicijn is ingenomen",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Inname Bevestiging"
+            ],
+            "id": "f219f6ad-85fe-406f-87a9-7f6167044286",
+            "source": {
+              "cell": "11da5329-118e-4db6-b5fd-da9df3996b43",
+              "port": "9f91c672-9b64-42cc-82ac-482fdfef2ac4"
+            },
+            "target": {
+              "cell": "d7d4d1b1-0b6d-4184-b5bf-9fe212dabd8b",
+              "port": "e9e77354-a786-44e7-85f5-3cad09a8e518"
+            },
+            "vertices": [
+              {
+                "x": 770,
+                "y": 610
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ophalen\nMedicatieschema",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Ophalen\nMedicatieschema"
+            ],
+            "id": "33277bc1-bbce-4a8d-8180-b5eff8b2bea1",
+            "source": {
+              "cell": "d7d4d1b1-0b6d-4184-b5bf-9fe212dabd8b",
+              "port": "a225d621-4694-4061-b9e2-8fb9cd041441"
+            },
+            "target": {
+              "cell": "11da5329-118e-4db6-b5fd-da9df3996b43",
+              "port": "3480be78-9b28-4434-b5f9-6e72429d92d7"
+            },
+            "vertices": [
+              {
+                "x": 810,
+                "y": 640
+              },
+              {
+                "x": 900,
+                "y": 600
+              },
+              {
+                "x": 880,
+                "y": 550
+              },
+              {
+                "x": 830,
+                "y": 550
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Ophalen\nMedicatieschema",
+              "description": "De Medicatieschema wordt getoond in de app voor de gebruiker.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Ophalen\nMedicatieschema"
+            ],
+            "id": "95fa746d-cb71-44ec-aab3-0e0e1df1fc12",
+            "source": {
+              "cell": "11da5329-118e-4db6-b5fd-da9df3996b43",
+              "port": "3480be78-9b28-4434-b5f9-6e72429d92d7"
+            },
+            "target": {
+              "cell": "3f5c73d1-b58f-42a8-9c26-be41a4914fdb",
+              "port": "35acce69-3c33-4221-815a-514f9457cfac"
+            },
+            "vertices": [
+              {
+                "x": 840,
+                "y": 380
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Planning en Medicatie \ninname logging",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Planning en Medicatie \ninname logging"
+            ],
+            "id": "7a4cd94f-b7af-40a4-9b49-34820fa88abc",
+            "source": {
+              "cell": "3f5c73d1-b58f-42a8-9c26-be41a4914fdb",
+              "port": "fb8c70cf-7429-4ed7-8c7d-bf218f798448"
+            },
+            "target": {
+              "cell": "c6750fa6-15db-4fb7-8b8f-0a5dd9082c60",
+              "port": "a85db0d3-266c-4084-b3b4-55f532c2cad2"
+            },
+            "vertices": [
+              {
+                "x": 1070,
+                "y": 380
+              },
+              {
+                "x": 1100,
+                "y": 330
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Synchronisatie",
+              "description": "De logs worden gesynchroniseert met de database bij beschikbaarheid van netwerkverbinding",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Synchronisatie"
+            ],
+            "id": "5fe77d4d-3cd7-4992-87c0-7c7fdc1f448a",
+            "source": {
+              "cell": "c6750fa6-15db-4fb7-8b8f-0a5dd9082c60",
+              "port": "a85db0d3-266c-4084-b3b4-55f532c2cad2"
+            },
+            "target": {
+              "cell": "3f5c73d1-b58f-42a8-9c26-be41a4914fdb",
+              "port": "fb8c70cf-7429-4ed7-8c7d-bf218f798448"
+            },
+            "vertices": [
+              {
+                "x": 1150,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Inloggegevens \nindienen",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Inloggegevens \nindienen"
+            ],
+            "id": "a1ea6561-8f6e-4af6-837e-372b1affeb82",
+            "source": {
+              "cell": "fe2b3148-75cd-47e5-9758-0f57236f30c9",
+              "port": "cd7b7f8c-8b39-4f56-a90c-eae581bcc14a"
+            },
+            "target": {
+              "cell": "0caea0d5-d09d-4964-a37d-0c56fb678a52",
+              "port": "dee13ec9-c1f5-4d2f-9234-b7a312e202ef"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              ""
+            ],
+            "id": "233101f9-e24a-4a39-94b8-b746c689e13c",
+            "source": {
+              "x": 1070,
+              "y": 90
+            },
+            "target": {
+              "x": 1400,
+              "y": 770
+            },
+            "vertices": [
+              {
+                "x": 720,
+                "y": 210
+              },
+              {
+                "x": 780,
+                "y": 400
+              },
+              {
+                "x": 840,
+                "y": 570
+              },
+              {
+                "x": 840,
+                "y": 620
+              },
+              {
+                "x": 820,
+                "y": 700
+              },
+              {
+                "x": 950,
+                "y": 800
+              }
+            ]
+          },
+          {
             "position": {
-              "x": 610,
-              "y": 680
+              "x": 630,
+              "y": 690
             },
             "size": {
               "width": 120,
@@ -932,14 +1773,27 @@
                   "new": false,
                   "number": 5,
                   "score": ""
+                },
+                {
+                  "id": "255f8d98-3a4a-4d81-a73c-4ed2c388d352",
+                  "title": "SQL Injection",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Kwaadaardige invoer kan database-query’s manipuleren.",
+                  "mitigation": "Minimum voorwaarden aan queries toevoegen, ORM-framework, input sanitization.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
                 }
               ]
             }
           },
           {
             "position": {
-              "x": 106,
-              "y": 570
+              "x": 26,
+              "y": 320
             },
             "size": {
               "width": 120,
@@ -1078,8 +1932,8 @@
           },
           {
             "position": {
-              "x": 420,
-              "y": 70.00000000000011
+              "x": -10,
+              "y": 520
             },
             "size": {
               "width": 100,
@@ -1097,6 +1951,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1180,7 +2035,6 @@
               ]
             },
             "id": "6f42db29-811f-42ab-81e5-116b7f931c58",
-            "zIndex": 13,
             "data": {
               "type": "tm.Process",
               "name": "Mantelzorger",
@@ -1198,8 +2052,8 @@
           },
           {
             "position": {
-              "x": 650,
-              "y": 450
+              "x": 670,
+              "y": 440
             },
             "size": {
               "width": 112.5,
@@ -1210,13 +2064,14 @@
                 "text": "Server"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -1300,7 +2155,6 @@
               ]
             },
             "id": "11da5329-118e-4db6-b5fd-da9df3996b43",
-            "zIndex": 14,
             "data": {
               "type": "tm.Actor",
               "name": "Server",
@@ -1308,7 +2162,7 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
               "threats": [
                 {
@@ -1323,14 +2177,27 @@
                   "new": false,
                   "number": 8,
                   "score": ""
+                },
+                {
+                  "id": "85ac4722-9be5-4cc9-84fa-b16234b3769f",
+                  "title": "Onvoldoende inputvalidatie",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Integrity",
+                  "description": "Onverwachte data kan code-uitvoering veroorzaken.",
+                  "mitigation": "",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
                 }
               ]
             }
           },
           {
             "position": {
-              "x": 890,
-              "y": 290
+              "x": 940,
+              "y": 360
             },
             "size": {
               "width": 140,
@@ -1341,13 +2208,14 @@
                 "text": "Mobile Webapp"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -1431,11 +2299,284 @@
               ]
             },
             "id": "3f5c73d1-b58f-42a8-9c26-be41a4914fdb",
-            "zIndex": 15,
             "data": {
               "type": "tm.Process",
               "name": "Mobile Webapp",
               "description": "De mobiele webapp functioneert netzoals Steam, het is een webportaal voor de webportaal dat past voor een telefoon en/of een tablet.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "953eb121-98e7-4c43-8eaa-ebec312d44f4",
+                  "title": "Onveilige opslag van tokens",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Confidentiality",
+                  "description": "Toegangstokens blijven onversleuteld opgeslagen.",
+                  "mitigation": "Implementeer 2FA, lockout bij herhaalde mislukte inlogpogingen.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 270,
+              "y": 630
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Login Service"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "74af9a7a-f2ad-4cbb-a3e8-d6fce889a827"
+                },
+                {
+                  "group": "right",
+                  "id": "dee13ec9-c1f5-4d2f-9234-b7a312e202ef"
+                },
+                {
+                  "group": "bottom",
+                  "id": "202f4731-3298-450f-a1b8-67391fb10bd2"
+                },
+                {
+                  "group": "left",
+                  "id": "a85db0d3-266c-4084-b3b4-55f532c2cad2"
+                }
+              ]
+            },
+            "id": "f3d7a5ff-e85f-4f2a-899c-f85f7a3cf0e4",
+            "zIndex": 16,
+            "data": {
+              "type": "tm.Store",
+              "name": "Login Service",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "46fc0791-c554-4520-b808-ea4ee43c5a8c",
+                  "title": "Brute-force of credential stuffing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Herhaalde pogingen om wachtwoorden te raden.",
+                  "mitigation": "Implementeer 2FA, lockout bij herhaalde mislukte inlogpogingen.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 1230,
+              "y": 490
+            },
+            "size": {
+              "width": 100,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "Oudere\nGebruikler"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "4eccfecb-45c2-4307-a2e3-6cb262215efb"
+                },
+                {
+                  "group": "right",
+                  "id": "55755113-83c5-4052-a81f-44a644a11996"
+                },
+                {
+                  "group": "bottom",
+                  "id": "b310c84c-d150-4323-b9c9-5145cc9de55b"
+                },
+                {
+                  "group": "left",
+                  "id": "cd7b7f8c-8b39-4f56-a90c-eae581bcc14a"
+                }
+              ]
+            },
+            "id": "fe2b3148-75cd-47e5-9758-0f57236f30c9",
+            "zIndex": 17,
+            "data": {
+              "type": "tm.Process",
+              "name": "Oudere\nGebruikler",
+              "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1446,12 +2587,502 @@
               "privilegeLevel": "",
               "threats": []
             }
+          },
+          {
+            "position": {
+              "x": 1030,
+              "y": 620
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Login Service"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "74af9a7a-f2ad-4cbb-a3e8-d6fce889a827"
+                },
+                {
+                  "group": "right",
+                  "id": "dee13ec9-c1f5-4d2f-9234-b7a312e202ef"
+                },
+                {
+                  "group": "bottom",
+                  "id": "202f4731-3298-450f-a1b8-67391fb10bd2"
+                },
+                {
+                  "group": "left",
+                  "id": "a85db0d3-266c-4084-b3b4-55f532c2cad2"
+                }
+              ]
+            },
+            "id": "0caea0d5-d09d-4964-a37d-0c56fb678a52",
+            "data": {
+              "type": "tm.Store",
+              "name": "Login Service",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "46fc0791-c554-4520-b808-ea4ee43c5a8c",
+                  "title": "Brute-force of credential stuffing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Herhaalde pogingen om wachtwoorden te raden.",
+                  "mitigation": "Implementeer 2FA, lockout bij herhaalde mislukte inlogpogingen.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ]
+            },
+            "zIndex": 18
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Resultaat Check",
+              "description": "Als de ingegeven credentials correct zijn, dan logt de gebruiker in en kan doorgaan.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Resultaat Check"
+            ],
+            "id": "764ef3e2-53fc-4b5d-ab34-e6680dc0b5a6",
+            "source": {
+              "cell": "d7d4d1b1-0b6d-4184-b5bf-9fe212dabd8b",
+              "port": "a225d621-4694-4061-b9e2-8fb9cd041441"
+            },
+            "target": {
+              "cell": "0caea0d5-d09d-4964-a37d-0c56fb678a52",
+              "port": "a85db0d3-266c-4084-b3b4-55f532c2cad2"
+            },
+            "vertices": [
+              {
+                "x": 830,
+                "y": 660
+              }
+            ],
+            "zIndex": 21
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Gegevens Checken",
+              "description": "De login server checkt of de ingegeven logingegevens correct zijn via een query.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Gegevens Checken"
+            ],
+            "id": "e8edeb78-66f1-440f-9313-c70445239a12",
+            "source": {
+              "cell": "0caea0d5-d09d-4964-a37d-0c56fb678a52",
+              "port": "a85db0d3-266c-4084-b3b4-55f532c2cad2"
+            },
+            "target": {
+              "cell": "d7d4d1b1-0b6d-4184-b5bf-9fe212dabd8b",
+              "port": "a225d621-4694-4061-b9e2-8fb9cd041441"
+            },
+            "vertices": [
+              {
+                "x": 860,
+                "y": 710
+              }
+            ],
+            "zIndex": 22
+          },
+          {
+            "position": {
+              "x": 760,
+              "y": 220
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Notificatie Service"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "74af9a7a-f2ad-4cbb-a3e8-d6fce889a827"
+                },
+                {
+                  "group": "right",
+                  "id": "dee13ec9-c1f5-4d2f-9234-b7a312e202ef"
+                },
+                {
+                  "group": "bottom",
+                  "id": "202f4731-3298-450f-a1b8-67391fb10bd2"
+                },
+                {
+                  "group": "left",
+                  "id": "a85db0d3-266c-4084-b3b4-55f532c2cad2"
+                }
+              ]
+            },
+            "id": "6e5d06cf-cf88-4426-b67e-40facdbf9ab3",
+            "zIndex": 23,
+            "data": {
+              "type": "tm.Store",
+              "name": "Notificatie Service",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1210,
+              "y": 270
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Lokale Logsysteem"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "74af9a7a-f2ad-4cbb-a3e8-d6fce889a827"
+                },
+                {
+                  "group": "right",
+                  "id": "dee13ec9-c1f5-4d2f-9234-b7a312e202ef"
+                },
+                {
+                  "group": "bottom",
+                  "id": "202f4731-3298-450f-a1b8-67391fb10bd2"
+                },
+                {
+                  "group": "left",
+                  "id": "a85db0d3-266c-4084-b3b4-55f532c2cad2"
+                }
+              ]
+            },
+            "id": "c6750fa6-15db-4fb7-8b8f-0a5dd9082c60",
+            "zIndex": 24,
+            "data": {
+              "type": "tm.Store",
+              "name": "Lokale Logsysteem",
+              "description": "De planning wordt lokaal opgeslagen en het loggen van medicatie inname wordt hier ook genomen en wordt gedaan wanneer een netwerkverbinding niet beschikbaar is en synchroniseert terug wanneer een netwerkverbinding terug beschikbaar is.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            }
           }
         ]
       }
     ],
     "diagramTop": 3,
     "reviewer": "Yo mama",
-    "threatTop": 8
+    "threatTop": 13
   }
 }

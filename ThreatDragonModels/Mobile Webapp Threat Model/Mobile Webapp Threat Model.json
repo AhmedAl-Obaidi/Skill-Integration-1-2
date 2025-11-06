@@ -1,0 +1,32 @@
+{
+  "version": "2.5.0",
+  "summary": {
+    "title": "Mobile Webapp Threat Model",
+    "owner": "Team 2.2/JMA1",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Ahmed Al-Obaidi"
+      },
+      {
+        "name": "Jarne Bouamoud"
+      },
+      {
+        "name": "Kerim Gökmen"
+      },
+      {
+        "name": "Stijn Rombouts"
+      },
+      {
+        "name": "Michiel Van den Broeck"
+      }
+    ],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "Yo mama",
+    "threatTop": 0
+  }
+}

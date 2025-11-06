@@ -1,0 +1,32 @@
+{
+  "version": "2.5.0",
+  "summary": {
+    "title": "Web/Mobile Webapp and Pillbox Threat Model",
+    "owner": "Team 2.2/JMA1",
+    "description": "This is a Threat Model about a web/mobile webapp portal that older and their caretakers can use to help with medicine intake.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Ahmed Al-Obaidi"
+      },
+      {
+        "name": "Stijn Rombouts"
+      },
+      {
+        "name": "Kerim Gökmen"
+      },
+      {
+        "name": "Jarne Bouamoud"
+      },
+      {
+        "name": "Michiel Van den Broeck"
+      }
+    ],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}

@@ -875,54 +875,6 @@
             "vertices": []
           },
           {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Web Portaal",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              "Web Portaal"
-            ],
-            "id": "da16d6af-11e6-4f7f-99ea-3ca95527ae17",
-            "source": {
-              "x": 90,
-              "y": 150
-            },
-            "target": {
-              "x": 220,
-              "y": 800
-            },
-            "vertices": [
-              {
-                "x": 190,
-                "y": 140
-              },
-              {
-                "x": 540,
-                "y": 210
-              },
-              {
-                "x": 660,
-                "y": 380
-              },
-              {
-                "x": 630,
-                "y": 560
-              },
-              {
-                "x": 490,
-                "y": 800
-              }
-            ]
-          },
-          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -1207,53 +1159,6 @@
                 "y": 500
               }
             ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "f5f68f8a-1bc0-493c-b1f7-3be387694048",
-            "source": {
-              "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
-              "port": "4ca0581b-3660-4412-b6d9-8f1fe46cddef"
-            },
-            "target": {
-              "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
-              "port": "4ca0581b-3660-4412-b6d9-8f1fe46cddef"
-            },
-            "vertices": [],
-            "parent": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92"
           },
           {
             "shape": "flow",
@@ -1620,6 +1525,54 @@
               },
               {
                 "x": 950,
+                "y": 800
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              ""
+            ],
+            "id": "da16d6af-11e6-4f7f-99ea-3ca95527ae17",
+            "source": {
+              "x": 60,
+              "y": 140
+            },
+            "target": {
+              "x": 0,
+              "y": 750
+            },
+            "vertices": [
+              {
+                "x": 190,
+                "y": 140
+              },
+              {
+                "x": 540,
+                "y": 210
+              },
+              {
+                "x": 660,
+                "y": 380
+              },
+              {
+                "x": 630,
+                "y": 560
+              },
+              {
+                "x": 490,
                 "y": 800
               }
             ]

@@ -1,0 +1,42 @@
+{
+  "version": "2.5.0",
+  "summary": {
+    "title": "Web/Mobile Webapp Threat Model",
+    "owner": "Team 2.2/JMA1",
+    "description": "",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Ahmed Al-Obaidi"
+      },
+      {
+        "name": "Jarne Bouamoud"
+      },
+      {
+        "name": "Kerim Gökmen"
+      },
+      {
+        "name": "Stijn Rombouts"
+      },
+      {
+        "name": "Michiel Van den Broeck"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Web/Mobile Webapp",
+        "diagramType": "Generic",
+        "placeholder": "New generic diagram description",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "version": "2.5.0",
+        "cells": []
+      }
+    ],
+    "diagramTop": 2,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}

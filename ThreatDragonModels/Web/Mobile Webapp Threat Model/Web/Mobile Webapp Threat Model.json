@@ -32,11 +32,356 @@
         "placeholder": "New generic diagram description",
         "thumbnail": "./public/content/images/thumbnail.jpg",
         "version": "2.5.0",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 210,
+              "y": 160
+            },
+            "size": {
+              "width": 130,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "Webapplicatie"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "8512f4a3-47a6-4d74-bf45-eb9d5b094bfa"
+                },
+                {
+                  "group": "right",
+                  "id": "7818f019-a403-433d-b2a0-5f6b51206074"
+                },
+                {
+                  "group": "bottom",
+                  "id": "21b817cc-9e85-449b-afcc-95bb10c21ee0"
+                },
+                {
+                  "group": "left",
+                  "id": "ecd38619-ec45-423b-8547-0a34f8fd4bfd"
+                }
+              ]
+            },
+            "id": "02996bce-1372-4672-8599-2984cf49047d",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Process",
+              "name": "Webapplicatie",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            },
+            "children": [
+              "c2d20029-1089-46cc-a927-0044dd53d7bc"
+            ]
+          },
+          {
+            "position": {
+              "x": 10,
+              "y": 40
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Browser"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "7ee7d7b0-ddf1-4467-b89e-80ebb65cef8d"
+                },
+                {
+                  "group": "right",
+                  "id": "59c442a7-abf8-4512-80fe-ab4798f7d5fe"
+                },
+                {
+                  "group": "bottom",
+                  "id": "75ea2d6a-aecc-4e8f-bc8e-7ecbe182e276"
+                },
+                {
+                  "group": "left",
+                  "id": "37b5fca0-3c6c-4fcc-b980-dddc3588e18b"
+                }
+              ]
+            },
+            "id": "cff4a26b-b6e4-4970-9af3-c6b4833e0e4b",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Browser",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "785ef8a9-8ba4-475d-8275-59db1c7d7bb1",
+                  "title": "Browser Vulneribility",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "Een browser kan vulneribilities hebben dat hackers aan een persoon zijn wachtwoorden kan toekomen.",
+                  "mitigation": "2FA implementeren zodat hackers niet alleen de browser nodig hebben als poort om in te loggen.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Request (HTTPS)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Web Request (HTTPS)"
+            ],
+            "id": "7e9858d2-479f-4447-a8a8-8b112447d209",
+            "source": {
+              "cell": "cff4a26b-b6e4-4970-9af3-c6b4833e0e4b",
+              "port": "59c442a7-abf8-4512-80fe-ab4798f7d5fe"
+            },
+            "target": {
+              "cell": "02996bce-1372-4672-8599-2984cf49047d",
+              "port": "8512f4a3-47a6-4d74-bf45-eb9d5b094bfa"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Response (HTTPS)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Web Response (HTTPS)"
+            ],
+            "id": "39ca9f7b-4802-4936-bdeb-977da32772c0",
+            "source": {
+              "cell": "02996bce-1372-4672-8599-2984cf49047d",
+              "port": "ecd38619-ec45-423b-8547-0a34f8fd4bfd"
+            },
+            "target": {
+              "cell": "cff4a26b-b6e4-4970-9af3-c6b4833e0e4b",
+              "port": "75ea2d6a-aecc-4e8f-bc8e-7ecbe182e276"
+            }
+          }
+        ]
       }
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 1
   }
 }

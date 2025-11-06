@@ -3,7 +3,7 @@
   "summary": {
     "title": "Mobile Webapp Threat Model",
     "owner": "Team 2.2/JMA1",
-    "description": "",
+    "description": "Het systeem bestaat uit een webportaal, mobiele webapp, loginservice en database. De oplossing ondersteunt gebruikers bij medicatiebeheer via web en mobiel, met notificaties, logging en synchronisatie.",
     "id": 0
   },
   "detail": {

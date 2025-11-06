@@ -153,12 +153,12 @@
               "threats": [
                 {
                   "id": "d8e54837-e7a5-4561-99bf-769168b97ce3",
-                  "title": "Browser Vulneribility",
-                  "status": "Open",
-                  "severity": "Low",
-                  "type": "Information disclosure",
-                  "description": "Een browser kan vulneribilities hebben dat hackers aan een persoon zijn wachtwoorden kan toekomen.",
-                  "mitigation": "2FA implementeren zodat hackers niet alleen de browser nodig hebben als poort om in te loggen.",
+                  "title": "DDos",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Aanvaller voert een DDoS-aanval uit met overmatige requests waardoor de portal traag of onbeschikbaar wordt.",
+                  "mitigation": "Rate limiting, load balancing, firewall/WAF, CDN inzetten.",
                   "modelType": "default",
                   "new": false,
                   "number": 2,
@@ -166,12 +166,12 @@
                 },
                 {
                   "id": "def0946a-c5e6-4147-b81c-b9c60fb0eb61",
-                  "title": "New generic threat",
+                  "title": "Invoer- of querymanipulatie via Web Portaal",
                   "status": "Open",
-                  "severity": "TBD",
-                  "type": "Spoofing",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Kwaadaardige gebruikers kunnen proberen parameters of formulieren te manipuleren om databasequeries te beïnvloeden.",
+                  "mitigation": "Server-side inputvalidatie, prepared statements en escaping.",
                   "modelType": "default",
                   "new": false,
                   "number": 3,
@@ -197,8 +197,8 @@
                 "text": "Browser"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -295,17 +295,17 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": [
                 {
                   "id": "d6c606ca-f807-4b96-8dd8-2a19568ae266",
                   "title": "Browser Vulneribility",
-                  "status": "Open",
-                  "severity": "Low",
+                  "status": "Mitigated",
+                  "severity": "High",
                   "type": "Information disclosure",
-                  "description": "Een browser kan vulneribilities hebben dat hackers aan een persoon zijn wachtwoorden kan toekomen.",
-                  "mitigation": "2FA implementeren zodat hackers niet alleen de browser nodig hebben als poort om in te loggen.",
+                  "description": "Sessietokens of cookies kunnen worden onderschept via onveilige verbinding.",
+                  "mitigation": "Gebruik van HTTPS, HttpOnly en Secure cookies.",
                   "modelType": "default",
                   "new": false,
                   "number": 7,
@@ -402,7 +402,34 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "028e8f77-a596-4311-abc0-56fc6b98346b",
+                  "title": "Onderschepping van dataverkeer",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Verkeer kan worden onderschept als HTTPS ontbreekt of verkeerd geconfigureerd is.",
+                  "mitigation": "TLS 1.2 of hoger, certificaatrotatie, HSTS.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 19,
+                  "score": ""
+                },
+                {
+                  "id": "b547ded9-83d3-41ee-8b04-88ce0b0c89f4",
+                  "title": "Onderschepping van dataverkeer",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Verkeer kan worden onderschept als HTTPS ontbreekt of verkeerd geconfigureerd is.",
+                  "mitigation": "TLS 1.2 of hoger, certificaatrotatie, HSTS.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                }
+              ]
             },
             "labels": [
               "Web Request (HTTPS)"
@@ -415,6 +442,16 @@
             "target": {
               "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
               "port": "da37715a-6729-4c41-a32f-9a7158a6a7db"
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
             }
           },
           {
@@ -1717,7 +1754,7 @@
                 {
                   "id": "1f34d7b3-ad20-4e3f-8b88-00ab3ff95bfb",
                   "title": "Credential theft",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "An attacker could obtain the DB credentials and use them to make unauthorised queries.\t\n\nEen hacker can de database credentials stelen en die gebruiken om data te stelen en/of queries uitvoeren dat schadelijk kunnen zijn.",
@@ -1730,11 +1767,11 @@
                 {
                   "id": "255f8d98-3a4a-4d81-a73c-4ed2c388d352",
                   "title": "SQL Injection",
-                  "status": "Open",
-                  "severity": "Medium",
+                  "status": "Mitigated",
+                  "severity": "Critical",
                   "type": "Tampering",
-                  "description": "Kwaadaardige invoer kan database-query’s manipuleren.",
-                  "mitigation": "Minimum voorwaarden aan queries toevoegen, ORM-framework, input sanitization.",
+                  "description": "SQL-injectie of manipulatie van queries waardoor data gewijzigd wordt.",
+                  "mitigation": "Parameterized queries, ORM-gebruik, prepared statements.",
                   "modelType": "default",
                   "new": false,
                   "number": 10,
@@ -2017,8 +2054,8 @@
                 "text": "Server"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -2115,17 +2152,17 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": [
                 {
                   "id": "4549ea92-b98e-4bd8-85a0-5ffbc9f83ce8",
-                  "title": "DDos Aanval",
+                  "title": "Authorisatie-problemen",
                   "status": "Mitigated",
-                  "severity": "Medium",
-                  "type": "Denial of service",
-                  "description": "Iemand kan een bv. een request overload aanval uitvoeren om de server over te belasten met query request zodat het niet meer fatsoenlijk kan werken.",
-                  "mitigation": "Implementeer rate limiting om het aantal verzoeken per gebruiker te beperken. Een Content Delivery Network (CDN) zoals Cloudflare voor extra bescherming en automatische loadbalancing gebruikena. \n",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Onbevoegde gebruiker krijgt adminrechten via kwetsbare API of ontbrekende toegangscontrole.",
+                  "mitigation": "Role-Based Access Control (RBAC), token-verificatie op API-niveau.",
                   "modelType": "default",
                   "new": false,
                   "number": 8,
@@ -2134,11 +2171,11 @@
                 {
                   "id": "85ac4722-9be5-4cc9-84fa-b16234b3769f",
                   "title": "Onvoldoende inputvalidatie",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Integrity",
-                  "description": "Onverwachte data kan code-uitvoering veroorzaken.",
-                  "mitigation": "",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Foutmeldingen of logging lekken gevoelige data (zoals bestandslocaties of stacktraces).",
+                  "mitigation": "Generieke foutmeldingen, logging zonder gevoelige details.",
                   "modelType": "default",
                   "new": false,
                   "number": 11,
@@ -2270,12 +2307,38 @@
                   "title": "Onveilige opslag van tokens",
                   "status": "Open",
                   "severity": "High",
-                  "type": "Confidentiality",
-                  "description": "Toegangstokens blijven onversleuteld opgeslagen.",
-                  "mitigation": "Implementeer 2FA, lockout bij herhaalde mislukte inlogpogingen.",
+                  "type": "Information disclosure",
+                  "description": "Tokens of gebruikersgegevens onveilig opgeslagen in local storage.",
+                  "mitigation": "Geen gevoelige data in local storage, gebruik encrypted storage (SecureStore, Keychain).",
                   "modelType": "default",
                   "new": false,
                   "number": 12,
+                  "score": ""
+                },
+                {
+                  "id": "0743cd20-c11a-429d-bf6a-fd04def112c9",
+                  "title": "Valse gebruikers",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Valse mobiele clients of gemodificeerde apps sturen malafide requests.",
+                  "mitigation": "Tokenverificatie, User-Agent filtering, SSL Pinning.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                },
+                {
+                  "id": "ec24253c-b9e8-4aad-a84a-5918351e01ec",
+                  "title": "DDos",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Gebruiker of aanvaller verzendt te veel API-aanvragen, overbelast de server.",
+                  "mitigation": "API rate limiting per gebruiker of IP, monitoring.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 17,
                   "score": ""
                 }
               ]
@@ -2407,12 +2470,12 @@
               "threats": [
                 {
                   "id": "46fc0791-c554-4520-b808-ea4ee43c5a8c",
-                  "title": "Brute-force of credential stuffing",
+                  "title": "Gestolen logins bij Login Service",
                   "status": "Open",
                   "severity": "High",
-                  "type": "Information disclosure",
-                  "description": "Herhaalde pogingen om wachtwoorden te raden.",
-                  "mitigation": "Implementeer 2FA, lockout bij herhaalde mislukte inlogpogingen.",
+                  "type": "Spoofing",
+                  "description": "Aanvaller probeert in te loggen met gestolen of brute-force credentials.",
+                  "mitigation": "Sterke wachtwoordvereisten, 2FA, login rate limiting, account lockout na meerdere pogingen.",
                   "modelType": "default",
                   "new": false,
                   "number": 13,
@@ -2666,15 +2729,41 @@
               "threats": [
                 {
                   "id": "46fc0791-c554-4520-b808-ea4ee43c5a8c",
-                  "title": "Brute-force of credential stuffing",
+                  "title": "Gestolen logins bij Login Service",
                   "status": "Open",
                   "severity": "High",
-                  "type": "Information disclosure",
-                  "description": "Herhaalde pogingen om wachtwoorden te raden.",
-                  "mitigation": "Implementeer 2FA, lockout bij herhaalde mislukte inlogpogingen.",
+                  "type": "Spoofing",
+                  "description": "Aanvallers proberen in te loggen met gestolen of geraden inloggegevens via brute force of credential stuffing.",
+                  "mitigation": "Sterke wachtwoordpolicy, 2FA, account lockout en rate limiting bij inlogpogingen.",
                   "modelType": "default",
                   "new": false,
                   "number": 13,
+                  "score": ""
+                },
+                {
+                  "id": "72c893e3-0b99-42a6-b1c7-f38308033b39",
+                  "title": "Geen logging van verdachte loginpogingen",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Geen logging van mislukte of verdachte inlogpogingen, waardoor aanvallen onopgemerkt blijven.",
+                  "mitigation": "Auditlog met IP-adres, timestamps, en userID’s.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                },
+                {
+                  "id": "4ea12c18-973c-46a1-92eb-f2036bd6102a",
+                  "title": "Encryptie van data",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Onversleutelde opslag van persoonsgegevens of medicatie-informatie.",
+                  "mitigation": "Encryptie in rust (AES-256), toegangsrestricties, back-ups versleutelen.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 15,
                   "score": ""
                 }
               ]
@@ -2904,7 +2993,21 @@
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "857d7c9d-61e8-4256-9c98-f9dfd6a274ba",
+                  "title": "Valse notifiecatieberichten",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Onbevoegde wijziging van notificatieberichten of spoofing van afzender.",
+                  "mitigation": "Authenticatie via tokens, alleen trusted servers mogen pushmeldingen versturen.",
+                  "modelType": "default",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -3036,6 +3139,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "Yo mama",
-    "threatTop": 13
+    "threatTop": 20
   }
 }

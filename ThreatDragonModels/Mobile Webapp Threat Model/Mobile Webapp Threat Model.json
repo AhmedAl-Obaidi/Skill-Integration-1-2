@@ -1910,7 +1910,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Planning/Medicine Usage Config"
+                "text": "Planning/Medicatie Schema"
               },
               "topLine": {
                 "stroke": "red",
@@ -2011,7 +2011,7 @@
             "id": "b06d1e6d-9f0c-4e28-86b7-62bfc3b2a82a",
             "data": {
               "type": "tm.Store",
-              "name": "Planning/Medicine Usage Config",
+              "name": "Planning/Medicatie Schema",
               "description": "Een code dat een planning met de gerelateerde persoonsgegevens in de database aanmaakt en bijvult wanneer medicatie ingenomen is",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -3135,12 +3135,12 @@
               "y": 270
             },
             "size": {
-              "width": 120,
+              "width": 220,
               "height": 60
             },
             "attrs": {
               "text": {
-                "text": "Lokale Logsysteem"
+                "text": "Lokale Medicatie Planning Cache"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -3239,7 +3239,7 @@
             "id": "c6750fa6-15db-4fb7-8b8f-0a5dd9082c60",
             "data": {
               "type": "tm.Store",
-              "name": "Lokale Logsysteem",
+              "name": "Lokale Medicatie Planning Cache",
               "description": "De planning wordt lokaal opgeslagen en het loggen van medicatie inname wordt hier ook genomen en wordt gedaan wanneer een netwerkverbinding niet beschikbaar is en synchroniseert terug wanneer een netwerkverbinding terug beschikbaar is.",
               "outOfScope": false,
               "isTrustBoundary": false,

@@ -325,13 +325,6 @@
                   "score": ""
                 }
               ]
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -541,57 +534,6 @@
               {
                 "x": 490,
                 "y": 550
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Logging/Planning \naanmaakprocess automatiseren",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Logging/Planning \naanmaakprocess automatiseren"
-            ],
-            "id": "cb86473f-c6aa-4bd2-871e-2fdbd5e76d09",
-            "source": {
-              "cell": "b06d1e6d-9f0c-4e28-86b7-62bfc3b2a82a",
-              "port": "e9e77354-a786-44e7-85f5-3cad09a8e518"
-            },
-            "target": {
-              "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
-              "port": "8d470ea8-69d9-4f52-9101-d6628a6314f3"
-            },
-            "vertices": [
-              {
-                "x": 190,
-                "y": 450
               }
             ]
           },
@@ -1741,6 +1683,57 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Logging/Planning \naanmaakprocess automatiseren",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Logging/Planning \naanmaakprocess automatiseren"
+            ],
+            "id": "cb86473f-c6aa-4bd2-871e-2fdbd5e76d09",
+            "source": {
+              "cell": "b06d1e6d-9f0c-4e28-86b7-62bfc3b2a82a",
+              "port": "4c5130de-d11b-4a8f-89bd-3c96314b54d4"
+            },
+            "target": {
+              "cell": "7eeec2af-3ba0-4bbf-aa52-8c07003cbc92",
+              "port": "8d470ea8-69d9-4f52-9101-d6628a6314f3"
+            },
+            "vertices": [
+              {
+                "x": 190,
+                "y": 450
+              }
+            ]
+          },
+          {
             "position": {
               "x": 630,
               "y": 690
@@ -1908,8 +1901,8 @@
           },
           {
             "position": {
-              "x": 26,
-              "y": 320
+              "x": -50,
+              "y": 330
             },
             "size": {
               "width": 120,
@@ -2032,7 +2025,7 @@
               "threats": [
                 {
                   "id": "57719519-d54a-4d3e-b5b5-11308b464382",
-                  "title": "",
+                  "title": "Code high jacking",
                   "status": "Open",
                   "severity": "High",
                   "type": "Integrity",
